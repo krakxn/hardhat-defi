@@ -1,23 +1,4 @@
-# Hardhat DeFi 
-
-This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Course.
-
-*[⌨️ (19:16:13) Lesson 13: Hardhat DeFi & Aave](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=69373s)*
-
-[Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
-
-- [Hardhat DeFi](#hardhat-defi)
-- [Getting Started](#getting-started)
-  - [Requirements](#requirements)
-  - [Quickstart](#quickstart)
-  - [Typescript](#typescript)
-    - [Optional Gitpod](#optional-gitpod)
-- [Usage](#usage)
-  - [Testing](#testing)
-- [Running on a testnet or mainnet](#running-on-a-testnet-or-mainnet)
-- [Linting](#linting)
-  - [Formatting](#formatting)
-- [Thank you!](#thank-you)
+# DeFi (Flash loans, Lending pools etc.) - Hardhat:
 
 # Getting Started
 
@@ -25,8 +6,8 @@ This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Cours
 
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
   - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
-- [Nodejs](https://nodejs.org/en/)
-  - You'll know you've installed nodejs right if you can run:
+- [Node.js](https://nodejs.org/en/)
+  - You'll know you've installed Node.js right if you can run:
     - `node --version` and get an ouput like: `vx.x.x`
 - [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) instead of `npm`
   - You'll know you've installed yarn right if you can run:
@@ -35,26 +16,20 @@ This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Cours
 
 ## Quickstart
 
+*Note: `url` refers to the repo's, `path` refers to the cloned repo's in your local directory*
 ```
-git clone https://github.com/PatrickAlphaC/hardhat-defi-fcc
-cd hardhat-defi-fcc
+git clone `url`
+cd `path`
 yarn
 ```
 
-## Typescript
+## TypeScript
 
-For the typescript edition, run:
+For the TypeScript edition, run:
 
 ```
 git checkout typescript
 ```
-
-### Optional Gitpod
-
-If you can't or don't want to run and install locally, you can work with this repo in Gitpod. If you do this, you can skip the `clone this repo` part.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#github.com/PatrickAlphaC/hardhat-defi-fcc)
-
 
 # Usage
 
@@ -70,7 +45,7 @@ yarn hardhat run scripts/aaveBorrow.js
 
 ## Testing
 
-We didn't write any tests for this, sorry!
+I didn't write any tests for this, sorry!
 
 
 # Running on a testnet or mainnet
@@ -79,13 +54,13 @@ We didn't write any tests for this, sorry!
 
 You'll want to set your `KOVAN_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
 
-- `PRIVATE_KEY`: The private key of your account (like from [metamask](https://metamask.io/)). **NOTE:** FOR DEVELOPMENT, PLEASE USE A KEY THAT DOESN'T HAVE ANY REAL FUNDS ASSOCIATED WITH IT.
+- `PRIVATE_KEY`: The private key of your account (like from [MetaMask](https://metamask.io/)). **NOTE:** FOR DEVELOPMENT, PLEASE USE A KEY THAT DOESN'T HAVE ANY REAL FUNDS ASSOCIATED WITH IT.
   - You can [learn how to export it here](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
 - `KOVAN_RPC_URL`: This is url of the kovan testnet node you're working with. You can get setup with one for free from [Alchemy](https://alchemy.com/?a=673c802981)
 
 2. Get testnet ETH
 
-Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesnet ETH. You should see the ETH show up in your metamask.
+Head over to [Chainlink Faucets](https://faucets.chain.link/) and get some testnet ETH. You should see the ETH show up in your MetaMask.
 
 3. Run
 

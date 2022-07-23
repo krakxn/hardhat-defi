@@ -12,25 +12,30 @@ async function main() {
     console.log("Depositing WETH...")
     await lendingPool.deposit(wethTokenAddress, AMOUNT, deployer, 0)
     console.log("Desposited!")
+    
     // Getting your borrowing stats
     let { availableBorrowsETH, totalDebtETH } = await getBorrowUserData(lendingPool, deployer)
     const daiPrice = await getDaiPrice()
     const amountDaiToBorrow = availableBorrowsETH.toString() * 0.95 * (1 / daiPrice.toNumber())
     const amountDaiToBorrowWei = ethers.utils.parseEther(amountDaiToBorrow.toString())
     console.log(`You can borrow ${amountDaiToBorrow.toString()} DAI`)
+    
     await borrowDai(
         networkConfig[network.config.chainId].daiToken,
         lendingPool,
         amountDaiToBorrowWei,
         deployer
     )
+    
     await getBorrowUserData(lendingPool, deployer)
+    
     await repay(
         amountDaiToBorrowWei,
         networkConfig[network.config.chainId].daiToken,
         lendingPool,
         deployer
     )
+    
     await getBorrowUserData(lendingPool, deployer)
 }
 
